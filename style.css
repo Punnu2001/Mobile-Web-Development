@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+    background-color: #F9B572;
+    color: #748E63;
+}
+
+form {
+    display: grid; 
+    grid-template-columns: 1fr; 
+    gap: 20px; 
+    justify-items: center; 
+}
+
+.element {
+    height: 330px;
+    width: 310px;
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr); 
+    align-items: center;
+    justify-items: space-between; 
+}
+
+.radio {
+    margin-top: 20px;
+    text-align: center;
+}
+
+label {
+    font-size: 24px;
+}
+
+.element > input {
+    font-size: 18px;
+    width: 150px;
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        background-color: #99B080;
+    }
+
+    .element {
+        width: 200px;grid-template-columns: repeat(1, 1fr); 
+    }
+
+    label {
+        font-size: 28px;
+    }
+
+    .element > input {
+        font-size: 18px;
+        width: 240px;
+    }
+}
