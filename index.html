@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="styles.css">
+    <title>Three-Part Form</title>
+</head>
+
+<body>
+    <header>
+        <h1>a Three-part form</h1>
+    </header>
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <form id="school-form" class="form">
+                    <div class="form-group">
+                        <label for="schoolName">Name of School:</label>
+                        <input type="text" id="schoolName" name="schoolName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="joinDate">Date of Joining:</label>
+                        <input type="date" id="joinDate" name="joinDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Graduated:</label>
+                        <label><input type="radio" name="graduated" value="yes" required> Yes</label>
+                        <label><input type="radio" name="graduated" value="no" required> No</label>
+                    </div>
+
+                </form>
+            </div>
+
+            <div class="swiper-slide">
+                <form id="personal-form" class="form">
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phoneNumber">Phone Number:</label>
+                        <input type="tel" id="phoneNumber" name="phoneNumber" pattern="[0-9]{10}" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="zipCode">Zip Code (Canada):</label>
+                        <input type="text" id="zipCode" name="zipCode" pattern="[A-Za-z]\d[A-Za-z] \d[A-Za-z]\d"
+                            required>
+                    </div>
+
+                </form>
+            </div>
+            <!-- Payment Information -->
+            <div class="swiper-slide">
+                <form id="payment-form" class="form">
+                    <div class="form-group">
+                        <label for="creditCard">Credit Card Number:</label>
+                        <input type="text" id="creditCard" name="creditCard" pattern="[0-9]{10}" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="expirationDate">Expiration Date:</label>
+                        <input type="date" id="expirationDate" name="expirationDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cvv">CVV:</label>
+                        <input type="text" id="cvv" name="cvv" pattern="[0-9]{3}" required>
+                    </div>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/validate-js/2.0.1/validate.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
