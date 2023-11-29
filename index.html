@@ -1,33 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <title>Fictional Store Inventory</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
-
 <body>
-    <h2>Deepak Dhiman</h2>
-    <form action="">
-        <div class="element">
-            <label for="fname">First Name</label>
-            <input type="text" id="fname" name="fname" />
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" />
-            <label for="phone">Phone Number</label>
-            <input type="tel" name="phone" id="phone">
-            <label for="textbox">Address</label>
-            <textarea name="textbox" id="textbox" cols="30" rows="10"></textarea>
-        </div>
-        <div class="button">
-            <label for="radio">Radio Buttion</label>
-            <input type="radio" name="radio" value="Yes"> Yes
-            <input type="radio" name="radio" value="No"> No
-        </div>
-        <button type="submit">Submit</button>
-    </form>
-</body>
+    <header>
+        <h1 style="text-align:center;color: beige; background-color: black;">Deepak Dhiman</h1>
+    </header>
 
+    <div class="container">
+        <div class="row">
+           
+            <div class="col-md-12 col-12 order-md-1 order-3">
+                <img style="align-items: center; padding-left: 55px; border: solid;" src="photo_camera_.png" class="img-fluid" alt="camera">
+                <figcaption style="padding-left: 50px;" class="figure-caption">camera availabel</figcaption>
+            </div>
+
+            
+            <div class="col-md-6 col-12 order-md-2 order-1">
+                <h2 style="padding: 15px;">Order Form</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="category">Product Category</label>
+                        <select class="form-control" id="category">
+                            <option>Electronics</option>
+                            <option>Toys</option>
+                            <option>Grocries</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="order">Would you like to order?</label>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="order" name="order">
+                            <label class="form-check-label" for="order">Yes</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="quantity">Quantity</label>
+                        <input type="range" class="form-control-range" id="quantity" name="quantity" min="1" max="100">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+
+         
+            <div class="col-md-6 col-12 order-md-3 order-2">
+                <h2 style="padding: 18px;">Inventory</h2>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Product Name</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Product 1</td>
+                            <td>$100</td>
+                            <td>50</td>
+                        </tr>
+                        <tr>
+                            <td>Product 2</td>
+                            <td>$350</td>
+                            <td>30</td>
+                        </tr>
+                        <tr>
+                            <td>Product 3</td>
+                            <td>$200</td>
+                            <td>20</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+  
+</body>
 </html>
